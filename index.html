@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunPod // Zero-Click Edition</title>
+    <style>
+        /* CSS: ZERO-CLICK DESIGN SYSTEM */
+        :root {
+            --bg-color: #050505;
+            --accent-green: #00ff00;
+            --text-dim: #888;
+            --font-main: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: var(--font-main);
+            margin: 0;
+            overflow-x: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid #1a1a1a;
+            background: rgba(0, 0, 0, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+            text-shadow: 0 0 10px var(--accent-green);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid var(--accent-green);
+            background: radial-gradient(circle at center, #0a1a0a 0%, #000 70%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--accent-green);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            border: 1px solid var(--accent-green);
+            padding: 15px 40px;
+            background: transparent;
+            color: var(--accent-green);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-green);
+            color: black;
+            box-shadow: 0 0 20px var(--accent-green);
+        }
+
+        /* FEATURE GRID (RunPod Style) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2px;
+            background-color: #1a1a1a;
+        }
+
+        .card {
+            background-color: var(--bg-color);
+            padding: 40px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background-color: #0a0a0a;
+        }
+
+        .card h3 {
+            color: var(--accent-green);
+            margin-bottom: 15px;
+        }
+
+        /* SCANLINE ANIMATION */
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            pointer-events: none;
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanline"></div>
+
+    <nav>
+        <div class="logo">RUNPOD // CLOUD_OS</div>
+        <div class="nav-links">
+            <a href="#">GPU PODS</a>
+            <a href="#">SERVERLESS</a>
+            <a href="#">STORAGE</a>
+            <a href="#">DOCS</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p>* INFRASTRUCTURE_DEPLOYMENT *</p>
+        <h1>AI Infrastructure<br>Without Action</h1>
+        <button class="cta-button" onclick="glitchEffect()">SPIN UP GPU POD</button>
+    </section>
+
+    <div class="grid">
+        <div class="card">
+            <h3>01 // GPU_COMPUTE</h3>
+            <p>Deploy B200s to RTX 4090s in seconds. Environment-aware staging for neural workloads.</p>
+        </div>
+        <div class="card">
+            <h3>02 // SERVERLESS</h3>
+            <p>Scale from 0 to 1000 workers. Autonomous evasion of idle costs and cold starts.</p>
+        </div>
+        <div class="card">
+            <h3>03 // PERSISTENCE</h3>
+            <p>Quantum-resistant storage clusters. Integrated modules for persistent data harvesting.</p>
+        </div>
+    </div>
+
+    <script>
+        // JS: ANIMATIONS & INTERACTION
+        function glitchEffect() {
+            const body = document.body;
+            body.style.filter = "invert(1) hue-rotate(90deg)";
+            setTimeout(() => {
+                body.style.filter = "none";
+                alert("INITIALIZING SECURE POD... CONNECTION ESTABLISHED.");
+            }, 100);
+        }
+
+        // Console Typing Animation
+        console.log(">> RUNPOD CLOUD OS LOADED...");
+        console.log(">> STATUS: ALL SYSTEMS OPERATIONAL");
+    </script>
+</body>
+</html>
